@@ -1,9 +1,9 @@
-
 # Import the modules
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.linear_model import LogisticRegression
 Split the Data into Training and Testing Sets
 Step 1: Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
 # Read the CSV file from the Resources folder into a Pandas DataFrame
@@ -60,7 +60,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
 Create a Logistic Regression Model with the Original Data
 Step 1: Fit a logistic regression model by using the training data (X_train and y_train).
 # Import the LogisticRegression module from SKLearn
-from sklearn.linear_model import LogisticRegression
 
 # Instantiate the Logistic Regression model
 model = LogisticRegression(random_state=1)
@@ -95,6 +94,8 @@ Step 4: Answer the following question.
 Question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
 
 Answer: The model is good a predicting both 0 and 1 results. It, however, is better at predicting the 0 results at a 1.00 precision, compared to a 0.85 precision score for 1.
+
+
 
 
 # Module 12 Report Template
